@@ -19,10 +19,9 @@ target_link_libraries(shape_app shapes)
 
 add_executable(shape_tests shape_tests.cpp)
 
-target_link_libraries(shape_tests shapes gtest gtest_main gmock)
+target_link_libraries(shape_tests shapes gtest gmock)
 
-# Register the test executable as a test with CTest
-add_test(NAME ShapeTests COMMAND shape_tests)
+gtest_discover_tests(shape_tests)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
