@@ -10,12 +10,8 @@ public:
 
 class Rectangle : public Shape {
 public:
-    Rectangle(double width, double height)
-        : width_(width), height_(height) {}
-
-    double calculateArea() {
-        return width_ * height_;
-    }
+    Rectangle(double width, double height);
+    double calculateArea();
 
 private:
     double width_;
@@ -24,19 +20,11 @@ private:
 
 class Circle : public Shape {
 public:
-    Circle(double radius) : radius_(radius) {}
-
-    double calculateArea() {
-        return 3.14 * radius_ * radius_;
-    }
+    Circle(double radius);
+    double calculateArea();
 
 private:
     double radius_;
 };
-
-void printArea(Shape& shape) {
-    double area = shape.calculateArea();
-    std::cout << "Area: " << area << std::endl;
-}
 
 #endif  // SHAPES_H
