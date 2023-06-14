@@ -27,4 +27,6 @@ private:
     double radius_;
 };
 
+void printArea(Shape& shape);
+
 #endif  // SHAPES_H
