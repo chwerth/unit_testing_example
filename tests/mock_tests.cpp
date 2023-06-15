@@ -60,22 +60,15 @@ TEST(MockNiceShapeTest, CalculateArea) {
 
 
 /**
-In Google Mock, a "nice" mock and a "strict" mock refer to different levels of strictness in enforcing expectations during testing.
-A nice mock is more lenient and allows unexpected calls to mock methods without failing the test.
-If no expectations are set for a particular method call, the nice mock will return a default value appropriate for the return type of the method.
-This can be useful when you are only interested in specific method calls and want to focus on testing specific scenarios without
-being overly concerned about every single method invocation.
-On the other hand, a strict mock is more rigid and enforces strict behavior by failing the test if there is any unexpected call to a mock method.
-It ensures that every method call is explicitly expected and specified in the test, and any deviation from the specified expectations will result in a test failure.
-Strict mocks are useful when you want to ensure that the test covers all possible method calls and that the behavior is precisely as expected, 
-leaving no room for any unexpected or unintended interactions.
+In Google Mock, the default behavior for mocks is to be "nice" mocks. Nice mocks have a relaxed behavior and
+do not enforce strict expectations by default. 
+They allow unexpected calls to mock methods and return default values for uninteresting methods.
+Nice mocks are more permissive and are useful when you want to focus on specific expectations and allow flexibility in the test code.
 
-To summarize:
+On the other hand, strict mocks have a stricter behavior. 
+They enforce strict expectations, meaning that any unexpected calls to mock methods or uninteresting methods will cause the test to fail. 
+Strict mocks help ensure that all interactions with the mock are explicitly defined and verified, leaving no room for accidental or unintended calls.
 
-- Nice Mock: Allows unexpected calls, returns default values for unmocked methods (default).
-- Strict Mock: Enforces strict behavior, fails the test on unexpected calls.
-
-The choice between a nice mock and a strict mock depends on the specific requirements of your test scenario.
-Nice mocks can be helpful in situations where you want to focus on specific aspects of the code under test,
-while strict mocks ensure that all interactions are explicitly defined and verified.
+By default, when you define a mock class using MOCK_METHOD, the resulting mock object is a nice mock.
+If you want to use strict mocks, you need to explicitly specify it when creating the mock object by using the ::testing::StrictMock class template.
 */
