@@ -72,7 +72,7 @@ leaving no room for any unexpected or unintended interactions.
 
 To summarize:
 
-- Nice Mock: Allows unexpected calls, returns default values for unmocked methods.
+- Nice Mock: Allows unexpected calls, returns default values for unmocked methods (default).
 - Strict Mock: Enforces strict behavior, fails the test on unexpected calls.
 
 The choice between a nice mock and a strict mock depends on the specific requirements of your test scenario.
