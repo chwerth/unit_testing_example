@@ -1,7 +1,7 @@
 #include <iostream>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "shapes.hpp" // Assuming the shapes and printArea() are defined in "shapes.h" file
+#include "shapes.hpp"
 
 // Mock class for the Shape interface
 class MockShape : public Shape {
