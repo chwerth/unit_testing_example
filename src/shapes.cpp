@@ -6,7 +6,7 @@ Rectangle::Rectangle(double width, double height) : width_(width), height_(heigh
     }
 }
 
-double Rectangle::calculateArea() 
+double Rectangle::calculateArea()
 {
     return width_ * height_;
 }

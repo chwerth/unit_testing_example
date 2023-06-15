@@ -1,4 +1,4 @@
-#include "shapes.cpp"
+#include "shapes.hpp"
 
 int main() {
     Rectangle rectangle(4.0, 3.0);
