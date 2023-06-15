@@ -47,8 +47,3 @@ TEST_F(ShapeTest, PrintAreaWithMockShape) {
 TEST(ShapeExceptionTest, RectangleConstructorWithNegativeWidth) {
     EXPECT_THROW(Rectangle rectangle(-4.0, 3.0), std::invalid_argument);
 }
-
-int main(int argc, char* argv[]) {
-    ::testing::InitGoogleMock(&argc, argv);
-    return RUN_ALL_TESTS();
-}
