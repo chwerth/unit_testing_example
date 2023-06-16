@@ -19,6 +19,8 @@ Circle::Circle(double radius) : radius_(radius) {
 
 double Circle::calculateArea() {
     return 3.14 * radius_ * radius_;
+    // Should we use more digits for pi? NASA uses 3.141592653589793
+    // https://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need
 }
 
 void printArea(Shape& shape) {
